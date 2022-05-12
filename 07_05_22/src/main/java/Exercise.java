@@ -11,7 +11,7 @@ class SQLCmds{
     void insertCmd() throws Exception{
         Class.forName("org.postgresql.Driver");
         //System.out.println("Driver loaded");
-        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/test","postgres","rushi");
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/demo","postgres","rushi");
         stmt = conn.createStatement();
         System.out.println("Enter id: ");
         id = ob.nextInt();
@@ -25,7 +25,7 @@ class SQLCmds{
     void selectCmd() throws Exception{
         Class.forName("org.postgresql.Driver");
         //System.out.println("Driver loaded");
-        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/test","postgres","rushi");
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/demo","postgres","rushi");
         stmt = conn.createStatement();
         String sql="select * from student";
         rs=stmt.executeQuery(sql);
@@ -39,7 +39,7 @@ class SQLCmds{
     void updateCmd() throws Exception{
         Class.forName("org.postgresql.Driver");
         //System.out.println("Driver loaded");
-        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/test","postgres","rushi");
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/demo","postgres","rushi");
         stmt = conn.createStatement();
         System.out.println("Enter which column to be updated (id/name) : ");
         String sel = ob.next();
@@ -65,7 +65,7 @@ class SQLCmds{
     void deleteCmd() throws Exception{
         Class.forName("org.postgresql.Driver");
         //System.out.println("Driver loaded");
-        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/test","postgres","rushi");
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/demo","postgres","rushi");
         stmt = conn.createStatement();
         System.out.println("Do you want delete all data : Yes/No ");
         String data = ob.next();
